@@ -3,8 +3,8 @@ class NegociacaoController {
   private inputQuantidade: JQuery;
   private inputValor: JQuery;
   private negociacoes = new Negociacoes();
-  private negociacoesView = new NegociacoesView('#negociacoesView');
-  private mensagemView = new MensagemView('#mensagemView');
+  private negociacoesView = new Views.NegociacoesView('#negociacoesView');
+  private mensagemView = new Views.MensagemView('#mensagemView');
 
   constructor() {
     this.inputData = $('#data');
