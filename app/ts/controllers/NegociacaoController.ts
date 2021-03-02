@@ -1,7 +1,7 @@
 import { NegociacoesView, MensagemView } from '../views/index';
 import { Negociacoes, Negociacao, NegociacaoParcial } from '../models/index';
 import { domInject, thottle } from '../helpers/decorators/index';
-import { NegociacaoService } from '../services/index';
+import { NegociacaoService, HandlerFunction } from '../services/index';
 
 export class NegociacaoController {
   @domInject('#data')
@@ -50,7 +50,7 @@ export class NegociacaoController {
 
   @thottle()
   importaDados() {
-    function isOK (res: Response) {
+    const isOK: HandlerFunction = (res: Response) => {
       if(res.ok) {
         return res;
       } else { 
