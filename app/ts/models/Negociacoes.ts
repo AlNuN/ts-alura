@@ -1,6 +1,6 @@
 import { Negociacao, Imprimivel } from './index';
 
-export class Negociacoes extends Imprimivel{
+export class Negociacoes implements Imprimivel{
   private negociacoes: Negociacao[] = [];
 
   adiciona(negociacao: Negociacao): void {
